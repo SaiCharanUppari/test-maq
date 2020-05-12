@@ -51,6 +51,18 @@ public class AdminController {
 		return "adminPage";
 
 	}
+	
+	/* Delete Down	*/
+	
+	@RequestMapping("/udelete")
+	public String deleteuserpage(Model model) {
+		
+		model.addAttribute("users", userService.getAccounts());
+		return "deleteUser";
+	}
+	
+	
+	/* Delete Up	*/
 
 	@RequestMapping("/showdeleteuser")
 	public String showdeletepage(Model model) {

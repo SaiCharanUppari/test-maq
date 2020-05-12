@@ -11,6 +11,24 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="../resources/css/areasstyle.css">
+<style type="text/css">
+
+* {
+	font-family: poppins;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+}
+
+.content button {
+	display: inline-block;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+</style>
 </head>
 <body>
 
@@ -19,16 +37,22 @@
 		<div class="row">
 			<div class="col-md-10 content">
 				<form action="/deleteproject" method="post">
-					select project Name you want to delete: <select id="projectName" name="projectName">
-					<c:forEach items="${projects}" var="project" varStatus="loop">
-					
-					<option value="${project.getProjectName()}">${project.getProjectName()}</option>
-					</c:forEach>
+					Select the project you want to delete: <select id="projectName"
+						name="projectName" class="form-control">
+						<option>--- select project ---</option>
+						<c:forEach items="${projects}" var="project" varStatus="loop">
+
+							<option value="${project.getProjectName()}">${project.getProjectName()}</option>
+						</c:forEach>
 					</select>
-					
-					<button type="submit" value="deleteProject" name="deleteProject">delete</button>
+
+					<button type="submit" class="btn btn-danger" value="deleteProject"
+						name="deleteProject">Delete Project</button>
+					<button type="button" class="btn btn-dark"
+						onclick="location.href='/adminOperations'">Home</button>
 
 				</form>
+
 			</div>
 		</div>
 	</div>

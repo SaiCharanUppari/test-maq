@@ -11,6 +11,24 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="../resources/css/areasstyle.css">
+<style type="text/css">
+
+* {
+	font-family: poppins;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+}
+
+.content button {
+	display: inline-block;
+	margin-top: 50px;
+	margin-left: 25px;
+}
+
+</style>
 </head>
 <body>
 
@@ -19,15 +37,22 @@
 		<div class="row">
 			<div class="col-md-10 content">
 				<form action="/adduser" method="post">
-					enter User Name : <input type="text" id="username" name="username">
-					enter Password : <input type="password" id="password" name="password">
-					<select id="role" name="role">
-						<option value="admin">admin</option>
-						<option value="client">client</option>
-					</select>
-					<button type="submit" value="addUser" name="addUser">Proceed</button>
 
+					Enter New Username : <input type="text" class="form-control"
+						id="username" name="username" required="required"> Enter Password : <input
+						type="password" class="form-control" id="password" name="password" required="required">
+					Select the role of user <select id="role" name="role"
+						class="form-control" required="required">
+						<option>--- select role ---</option>
+						<option value="Admin">Admin</option>
+						<option value="Client">Client</option>
+					</select>
+					<button type="submit" class="btn btn-success" value="addUser"
+						name="addUser">Add User</button>
+					<button type="button" class="btn btn-dark"
+						onclick="location.href='/adminOperations'">Home</button>
 				</form>
+
 			</div>
 		</div>
 	</div>

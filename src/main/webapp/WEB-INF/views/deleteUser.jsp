@@ -11,28 +11,53 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="../resources/css/areasstyle.css">
+<style type="text/css">
+* {
+	font-family: poppins;
+}
+
+
+</style>
 </head>
 <body>
-
 
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 content">
-				<form action="/deleteuser" method="post">
-					select user Name you want to delete: <select id="username" name="username">
-					<c:forEach items="${users}" var="user" varStatus="loop">
-					
-					<option value="${user.getUsername()}">${user.getUsername()}</option>
-					</c:forEach>
-					</select>
-					
-					<button type="submit" value="deleteUser" name="deleteUser">delete</button>
 
+				<form action="/deleteuser" method="post">
+					<table class="table table-striped table-hover">
+
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>User</th>
+								<th>Role</th>
+								<th></th>
+							</tr>
+						</thead>
+
+						<c:forEach items="${users}" var="user" varStatus="loop">
+							<tr>
+								<td>${user.id }</td>
+								<td>${user.username}</td>
+								<td>${user.role }</td>
+								<td>
+									<button type="submit" class="btn btn-danger"
+										value="${user.username }" name="username">Delete</button>
+								</td>
+
+							</tr>
+						</c:forEach>
+					</table>
 				</form>
+
+				<button type="button" class="btn btn-dark btnhome"
+					onclick="location.href='/adminOperations'">Home</button>
+
 			</div>
 		</div>
 	</div>
-
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

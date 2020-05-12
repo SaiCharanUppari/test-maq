@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.mindtree.testdevopsmaq.model.Area;
 import com.mindtree.testdevopsmaq.model.Category;
 import com.mindtree.testdevopsmaq.model.Project;
@@ -166,51 +165,5 @@ public class UserController {
 		return "index";
 
 	}
-
-	/*
-	 * @RequestMapping("/adduser") public User addUser(@RequestBody User user) {
-	 * 
-	 * User added = userService.addUser(user);
-	 * 
-	 * return added; }
-	 * 
-	 * @RequestMapping("/addproject/{id}") public Project addProject(@RequestBody
-	 * Project project, @PathVariable int id) {
-	 * 
-	 * Project added = projectService.addProject(project, id);
-	 * 
-	 * return added; }
-	 * 
-	 * @RequestMapping("/addarea") public Area addArea(@RequestBody Area area) {
-	 * 
-	 * Area added = areaService.addArea(area);
-	 * 
-	 * return added; }
-	 * 
-	 * @RequestMapping("/addcategory/{id}") public Category addCategory(@RequestBody
-	 * Category category, @PathVariable int id) {
-	 * 
-	 * Category added = categoryService.addCategory(category, id);
-	 * 
-	 * return added; }
-	 * 
-	 * @RequestMapping("/addquestion/{id}") public Question addQuestion(@RequestBody
-	 * Question question, @PathVariable int id) {
-	 * 
-	 * Question added = questionService.addQuestion(question, id);
-	 * 
-	 * return added; }
-	 * 
-	 * @RequestMapping("/addfeedback") public Feedback addFeedback(@RequestBody
-	 * Feedback feedback, @RequestParam int uid, @RequestParam int pid,
-	 * 
-	 * @RequestParam int aid, @RequestParam int cid, @RequestParam int
-	 * qid, @RequestParam int rid) {
-	 * 
-	 * Feedback added = feedbackService.addFeedback(feedback, uid, pid, aid, cid,
-	 * qid, rid);
-	 * 
-	 * return added; }
-	 */
 
 }

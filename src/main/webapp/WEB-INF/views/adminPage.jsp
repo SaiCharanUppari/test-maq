@@ -11,16 +11,52 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="../resources/css/areasstyle.css">
+<style type="text/css">
+
+* {
+	font-family: poppins;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+}
+
+.content li {
+	display: inline-block;
+}
+
+.content li button {
+	justify-content: space-between;
+}
+</style>
 </head>
 <body>
 
 
 	<div class="container">
 		<div class="row">
+			<div class="col-md-12 header">
+				<h1 style="text-align: center; margin-bottom: 100px">Admin
+					Operation</h1>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-md-10 content">
-				<a href="/showadduser">add user</a></br> </br> <a href="/showdeleteuser">delete
+				<ul>
+					<li><button type="button" class="btn btn-dark"
+							onclick="location.href='/showadduser'">Add User</button></li>
+					<li><button type="button" class="btn btn-dark"
+							onclick="location.href='/showdeleteuser'">Delete User</button></li>
+					<li><button type="button" class="btn btn-dark"
+							onclick="location.href='/showaddproject'">Add Project</button></li>
+					<li><button type="button" class="btn btn-dark"
+							onclick="location.href='/showdeleteproject'">Delete
+							Project</button></li>
+				</ul>
+				<!-- <a href="/showadduser">add user</a></br> </br> <a href="/showdeleteuser">delete
 					user</a></br> </br> <a href="/showaddproject">add project</a></br> </br> <a
-					href="/showdeleteproject">delete project</a></br> </br>
+					href="/showdeleteproject">delete project</a></br> </br> -->
 			</div>
 		</div>
 	</div>
