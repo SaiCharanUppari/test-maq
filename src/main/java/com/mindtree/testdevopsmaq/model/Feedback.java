@@ -1,6 +1,10 @@
 package com.mindtree.testdevopsmaq.model;
 
+import java.util.Map;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -10,6 +14,7 @@ import javax.persistence.OneToOne;
 public class Feedback {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	@OneToOne
 	private User user;

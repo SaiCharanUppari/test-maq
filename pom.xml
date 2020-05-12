@@ -59,6 +59,11 @@
 		</dependency>
 		<!-- Starting of the custom dependencies -->
 		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+
+		</dependency>
+		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jasper</artifactId>
 			<version>9.0.1</version>

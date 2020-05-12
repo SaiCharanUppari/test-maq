@@ -7,5 +7,7 @@ import com.mindtree.testdevopsmaq.model.Project;
 
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Integer> {
+	
+	Project findByProjectName(String projectName);
 
 }

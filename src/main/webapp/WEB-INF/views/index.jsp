@@ -107,15 +107,15 @@
 		<table class="table-dark table-hover" style="margin: 0 auto;">
 			<tr>
 				<td width="800px" style="padding: 10px;">
-					<p>${question.question}</p>
+					<input type="text" value="${question.id }" disabled="disabled" hidden="" name="qid">${question.question}</h5>
 				</td>
-				<td style="padding: 10px;"><select>
-						<option>Always</option>
-						<option>Often</option>
-						<option>Sometimes</option>
-						<option>Seldom</option>
-						<option>Never</option>
-						<option>Not Applicable</option>
+				<td style="padding: 10px;"><select name="rid">
+						<option value="5">Always</option>
+						<option value="4">Often</option>
+						<option value="3">Sometimes</option>
+						<option value="2">Seldom</option>
+						<option value="1">Never</option>
+						<option value="0">Not Applicable</option>
 				</select></td>
 				<td style="padding: 10px;"><textarea rows="1" cols="20"
 						name="remark" placeholder="Remark"></textarea></td>
