@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.mindtree.testdevopsmaq.exception.WrongPasswordException;
 import com.mindtree.testdevopsmaq.model.Area;
 import com.mindtree.testdevopsmaq.model.Category;
 import com.mindtree.testdevopsmaq.model.Project;
@@ -83,11 +86,11 @@ public class UserController {
 
 	}
 
-	@RequestMapping(value =  "/getuserprojects/{uid}", method = RequestMethod.POST)
+	@RequestMapping(value = "/getuserprojects/{uid}", method = RequestMethod.POST)
 	public String getUserProject(@RequestParam String username, Model model) {
 
 		User user = userRepo.findByUsername(username);
-		
+
 		List<Project> epList = projectRepo.findAll();
 
 		List<Project> pList = new ArrayList<>();
@@ -129,13 +132,13 @@ public class UserController {
 		for (Category category : ecList) {
 			if (category.getArea().getId() == aid)
 				cList.add(category);
-			
+
 //			for (Question question : eqList) {
 //				if(question.getCategory().getId() == category.getId()) {
 //					
 //				}
 //			}
-			
+
 		}
 
 		System.out.println(cList.size());
@@ -164,6 +167,26 @@ public class UserController {
 
 		return "index";
 
+	}
+
+	@RequestMapping("/userOperations")
+	public String showUserOptions() {
+		return "userOptions";
+	}
+
+	@RequestMapping("/showchangePassword")
+	public String showChangePassword() {
+		return "changePassword";
+	}
+
+	@RequestMapping("/changePassword")
+	public ModelAndView changePassword(String username, String oldPassword, String password1)
+			throws WrongPasswordException {
+		userService.changePassword(username, oldPassword, password1);
+		ModelAndView modelandview = new ModelAndView();
+		modelandview.setViewName("userOptions");
+		return modelandview;
+		// return "redirect:/userOperations";
 	}
 
 }
