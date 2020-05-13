@@ -80,7 +80,7 @@ public class UserServiceImpl implements UserService {
 			userRepo.saveAndFlush(user);
 
 		} else {
-			throw new WrongPasswordException("The password You entered did not match the old password");
+			throw new WrongPasswordException("The password you entered did not match your old password");
 		}
 	}
 

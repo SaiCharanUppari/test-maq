@@ -11,14 +11,40 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="../resources/css/areasstyle.css">
+
+<style type="text/css">
+* {
+	font-family: poppins;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+}
+
+.content li {
+	display: inline-block;
+}
+
+.content li button {
+	justify-content: space-between;
+}
+</style>
+
 </head>
 <body>
-
 
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 content">
-				<a href="/showchangePassword">change Password</a></br> </br> 
+				<ul>
+					<li><button type="button" class="btn btn-dark"
+							onclick="location.href='/showchangePassword'">Change
+							Password</button></li>
+							
+					<!-- <li><button type="button" class="btn btn-dark"
+							onclick="location.href='/userOperations'">Home</button></li> -->
+				</ul>
 			</div>
 		</div>
 	</div>

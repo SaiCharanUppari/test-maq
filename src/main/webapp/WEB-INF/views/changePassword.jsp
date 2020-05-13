@@ -11,6 +11,24 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="../resources/css/areasstyle.css">
+
+<style type="text/css">
+* {
+	font-family: poppins;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+}
+
+.content button {
+	display: inline-block;
+	margin-top: 50px;
+	margin-left: 15px;
+}
+</style>
+
 </head>
 <body>
 	<script>
@@ -29,40 +47,30 @@
 			}
 		}
 	</script>
-	<form id="regForm" onsubmit="return myFunction()"
-		action="/changePassword">
-		<!-- Password
-		</td> <input type="password" name="pass" value="" /> Re Password <input
-			type="password" name="rpass" value="" />  -->
-		Enter user name: <input id="username" name="username" type="text" /></br>
-		Enter Old password :<input id="oldPassword" name="oldPassword"
-			type="password" /></br> </br> Enter new Password : <input id="password1"
-			name="password1" type="password" /> Confirm new Password : <input
-			id="password2" name="password2" type="password" />
-		<button type="submit" value="change" name="change">change
-			password</button>
 
-	</form>
-
-	<!-- <div class="container">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-10 content">
-				<form action="/changePassword">
-			Enter user name: <input id="username" name="username"
-						type="text" /></br>
-					Enter Old password :<input id="oldPassword" name="oldPassword"
-						type="password" /></br>
-					</br> Enter new Password : <input id="password" name="password"
-						type="password" />
-					<button type="submit" value="change" name="change">change
-						password</button>
+
+				<form id="regForm" onsubmit="return myFunction()"
+					action="/changePassword" method="post">
+
+					User Name: <input id="username" class="form-control"
+						name="username" type="text" / required="required"> Old password : <input
+						id="oldPassword" class="form-control" name="oldPassword"
+						type="password" / required="required"> New Password : <input id="password1"
+						class="form-control" name="password1" type="password" required="required"/> Confirm
+					New Password : <input id="password2" class="form-control"
+						name="password2" type="password" required="required" />
+					<button type="submit" class="btn btn-primary btnchpwd"
+						value="change" name="change">Change Password</button>
+					<button type="button" class="btn btn-dark"
+						onclick="location.href='/userOperations'">Home</button>
 
 				</form>
 			</div>
 		</div>
-	</div> -->
-
-
+	</div>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
