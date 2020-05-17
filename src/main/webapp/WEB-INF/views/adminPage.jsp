@@ -12,7 +12,6 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" href="../resources/css/areasstyle.css">
 <style type="text/css">
-
 * {
 	font-family: poppins;
 }
@@ -53,13 +52,16 @@
 					<li><button type="button" class="btn btn-dark"
 							onclick="location.href='/showdeleteproject'">Delete
 							Project</button></li>
+
 				</ul>
-				<!-- <a href="/showadduser">add user</a></br> </br> <a href="/showdeleteuser">delete
-					user</a></br> </br> <a href="/showaddproject">add project</a></br> </br> <a
-					href="/showdeleteproject">delete project</a></br> </br> -->
 			</div>
 		</div>
+
+<!-- 		<iframe src="" width="100%" height="300px;" id="frame"></iframe>
+ -->
 	</div>
+
+
 
 
 	<!-- Optional JavaScript -->

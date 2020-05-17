@@ -1,0 +1,93 @@
+@charset "ISO-8859-1";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: poppins;
+}
+
+.col {
+	background: #333;
+}
+
+.jumbotron {
+	background: #333;
+}
+
+.jumbotron h1, .jumbotron h5 {
+	text-align: center;
+	color: #fff;
+}
+
+.btnlogin {
+	width: 200px;
+	text-align: center;
+	margin: 0 auto;
+	background: #333;
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.btnlogin:hover {
+	/* width: 250px; */
+	text-align: center;
+	margin: 0 auto;
+	background: #fff;
+	color: #333;
+	border: 1px solid #333;
+}
+
+.modal-content {
+	background: #333;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
+.modal-title {
+	height: 50px;
+	color: #fff;
+	text-align: center;
+	padding-top: 5px;
+	font-size: 30px;
+}
+
+.btnclose {
+	height: 45px;
+	width: 45px;
+	float: right;
+	color: #fff;
+	font-size: 50px;
+}
+
+.btnclose:hover {
+	height: 45px;
+	width: 45px;
+	float: right;
+	color: #333;
+	font-size: 50px;
+	border-radius: 50%;
+	background-color: #fff;
+	float: right;
+}
+
+.modal-body {
+	background: #fff;
+}
+
+.modal-content input, .modal-content select {
+	margin: 15px auto 15px auto;
+	border: 1px solid #333;
+	width: 300px;
+}
+
+legend {
+	background: #333;
+	color: #fff;
+}
+
+.jumbotron li {
+	display: inline-block;
+}
+
+.jumbotron li button {
+	justify-content: space-between;
+}

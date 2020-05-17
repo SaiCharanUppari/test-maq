@@ -50,7 +50,7 @@
 					<button type="submit" class="btn btn-success" value="addUser"
 						name="addUser">Add User</button>
 					<button type="button" class="btn btn-dark"
-						onclick="location.href='/adminOperations'">Home</button>
+						onclick="location.href='/adminOperations'">Cancel</button>
 				</form>
 
 			</div>

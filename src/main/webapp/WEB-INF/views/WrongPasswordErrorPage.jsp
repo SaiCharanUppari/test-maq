@@ -26,7 +26,7 @@
 	margin-top: 100px;
 	padding: 50px;
 	box-sizing: border-box;
-	box-shadow: 10px 10px 10px 2px #000;
+	box-shadow: 0 0 10px 5px grey;
 }
 
 .box > h1 {

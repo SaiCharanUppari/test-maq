@@ -51,7 +51,7 @@
 					<button type="submit" class="btn btn-success" value="addProject"
 						name="addProject">Add Project</button>
 					<button type="button" class="btn btn-dark"
-						onclick="location.href='/adminOperations'">Home</button>
+						onclick="location.href='/adminOperations'">Cancel</button>
 
 				</form>
 

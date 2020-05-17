@@ -53,7 +53,7 @@
 				</form>
 
 				<button type="button" class="btn btn-dark btnhome"
-					onclick="location.href='/adminOperations'">Home</button>
+					onclick="location.href='/adminOperations'">Cancel</button>
 
 			</div>
 		</div>

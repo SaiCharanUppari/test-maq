@@ -34,11 +34,19 @@ public class AdminController {
 
 	@Autowired
 	FeedbackService feedbackService;
-
+	
+	
 	@RequestMapping("/adminOperations")
-	public String adminOperations() {
-		return "adminPage";
+	public String admin(Model model) {
+		model.addAttribute("users", userService.getAccounts());
+		model.addAttribute("projects", projectService.getProjects());
+		return "admin";
 	}
+
+	/*
+	 * @RequestMapping("/adminOperations") public String adminOperations() { return
+	 * "adminPage"; }
+	 */
 
 	@RequestMapping("/showadduser")
 	public String showuserpage() {
@@ -48,7 +56,7 @@ public class AdminController {
 	@RequestMapping("/adduser")
 	public String addUser(User newUser) {
 		userService.addNewUser(newUser);
-		return "adminPage";
+		return "redirect:/adminOperations";			//changed adminPage
 
 	}
 	
@@ -73,7 +81,7 @@ public class AdminController {
 	@RequestMapping("/deleteuser")
 	public String deleteUser(String username) {
 		userService.deleteUser(username);
-		return "adminPage";
+		return "redirect:/adminOperations";			//changed adminPage
 	}
 
 	@RequestMapping("/showdeleteproject")
@@ -86,7 +94,7 @@ public class AdminController {
 	@RequestMapping("/deleteproject")
 	public String deleteProject(String projectName) {
 		projectService.deleteProject(projectName);
-		return "adminPage";
+		return "redirect:/adminOperations";		//changed adminPage
 	}
 
 	@RequestMapping("/showaddproject")
@@ -98,7 +106,7 @@ public class AdminController {
 	@RequestMapping("/addproject")
 	public String addProject(Project project, String username) {
 		projectService.addNewProject(project, username);
-		return "adminPage";
+		return "redirect:/adminOperations";		//changed adminPage
 
 	}
 

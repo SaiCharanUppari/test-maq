@@ -65,7 +65,7 @@
 					<button type="submit" class="btn btn-primary btnchpwd"
 						value="change" name="change">Change Password</button>
 					<button type="button" class="btn btn-dark"
-						onclick="location.href='/userOperations'">Home</button>
+						onclick="location.href='/userOperations'">Cancel</button>
 
 				</form>
 			</div>

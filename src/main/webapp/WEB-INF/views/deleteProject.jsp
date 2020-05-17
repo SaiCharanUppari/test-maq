@@ -49,7 +49,7 @@
 					<button type="submit" class="btn btn-danger" value="deleteProject"
 						name="deleteProject">Delete Project</button>
 					<button type="button" class="btn btn-dark"
-						onclick="location.href='/adminOperations'">Home</button>
+						onclick="location.href='/adminOperations'">Cancel</button>
 
 				</form>
 

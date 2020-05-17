@@ -184,7 +184,7 @@ public class UserController {
 			throws WrongPasswordException {
 		userService.changePassword(username, oldPassword, password1);
 		ModelAndView modelandview = new ModelAndView();
-		modelandview.setViewName("userOptions");
+		modelandview.setViewName("redirect:/adminOperations");
 		return modelandview;
 		// return "redirect:/userOperations";
 	}
